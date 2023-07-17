@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/05db2177e4.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(112, 167, 207);
+            overflow-x: hidden;
+        }
+
+        .main {
+            height: 450px;
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 60px;
+            box-shadow: rgb(66, 82, 82) 1px 10px 30px 5px;
+            background-color: white;
+            border-radius: 20px;
+
+        }
+
+        .detailText {
+            padding-left: 10px;
+            margin-top: 50px;
+        }
+
+        #submitBtn {
+            background-color: rgb(22, 134, 209);
+            height: 40px;
+            width: 290px;
+            border: none;
+            border-radius: 20px;
+            margin-left: 65px;
+        }
+
+        button:active {
+            box-shadow: 2px 2px 5px rgb(22, 103, 157);
+        }
+
+        input {
+            height: 40px;
+            width: 300px;
+            outline: none;
+            padding-left: 5px;
+            border-radius: 5px;
+            background-color: rgb(246, 247, 250);
+            margin-left: 50px;
+        }
+
+        .fa-user {
+            font-size: xx-large;
+            background-color: rgb(99, 183, 211);
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+        }
+
+        #link {
+            margin-left: 240px;
+        }
+
+        #check {
+            height: 15px;
+            width: 15px;
+            margin-left: 65px;
+        }
+
+        #login {
+            margin-left: 100px;
+            margin-top: 60px;
+
+        }
+
+        .display {
+            display: flex;
+        }
+
+        .linkedinBtn,
+        .twitterBtn,
+        .facebookBtn {
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+            background-color: rgb(99, 183, 211);
+            border: none;
+            margin-left: 20px;
+            color: white;
+            margin-top: 30px;
+
+        }
+
+        .linkedin,
+        .twitter,
+        .facebook {
+            margin-left: 5px;
+            text-decoration: none;
+
+        }
+
+        .p1 {
+            margin-top: 40px;
+            font-weight: bold;
+            font-size: larger;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-left: 30px;
+        }
+
+        .line1 {
+            border-bottom: 2px solid gray;
+            width: 85%;
+            margin-top: 20px;
+        }
+
+        #or1 {
+            /* margin-top: 40px; */
+            margin-top: 2px;
+            position: absolute;
+            border-radius: 50%;
+            background-color: white;
+            padding: 10px;
+        }
+
+        .divider {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* header bar css....................................................... */
+        .header {
+            padding: 0 4.8rem;
+            height: 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #8ab9da;
+            box-shadow: rgb(75, 112, 156) 1px 10px 30px 5px;
+        }
+
+        ul {
+            display: flex;
+            gap: 60px;
+
+        }
+
+        .menulink {
+            text-decoration: none;
+            color: black;
+        }
+
+        .fa-solid {
+            font-size: 2rem;
+        }
+
+        .mobile-view {
+            display: none;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        .fa-xmark {
+            display: none;
+
+        }
+
+        @media screen and (max-width:900px) {
+            .mobile-view {
+                display: block;
+                z-index: 1;
+            }
+
+            .header .logo {
+                width: 40%;
+            }
+
+            .navbar {
+                /* display: none; */
+                width: 40%;
+                height: 80vh;
+                right: 0;
+                background-color: #d2e2ed;
+                position: absolute;
+                top: 0;
+                /* left: 0; */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transform: translateX(100%);
+                /* transition: all 1s linear; */
+                opacity: 0;
+                /* visibility: hidden; */
+                /* pointer-events: none; */
+                /* padding-top: 40px; */
+                z-index: 1;
+            }
+
+            .header {
+                position: relative;
+            }
+
+            .list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .active .navbar {
+                transform: translateX(0);
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+            }
+
+            .active .mobile-view .fa-bars {
+                display: none;
+            }
+
+            .active .mobile-view .fa-xmark {
+                display: block;
+                /* filter: blur(8px); */
+
+            }
+
+             .blurring {
+                filter: blur(8px);
+
+            }
+
+            /* .fa-slack {
+                font-size: 4rem;
+                color: rgb(49, 114, 188);
+                margin-right: 20px;
+
+            } */
+
+            /* .logo {
+                font-family: 'Dancing Script', cursive;
+                font-size: 3rem;
+                color: rgb(43, 43, 110);
+            } */
+        }
+
+            @media screen and (max-width:590px) {
+
+                .logo,
+                .fa-slack {
+                    font-size: 2rem;
+                }
+
+                .fa-bars {
+                    font-size: 1rem;
+                }
+            }
+
+            @media screen and (max-width:390px) {
+
+                .logo,
+                .fa-slack {
+                    font-size: 1rem;
+                }
+            }
+            .logo {
+                font-family: 'Dancing Script', cursive;
+                font-size: 3rem;
+                color: rgb(43, 43, 110);
+            }
+            .fa-slack {
+                font-size: 3.5rem;
+                color: rgb(49, 114, 188);
+                margin-right: 20px;
+
+            }
+        
+    </style>
+
+</head>
+
+<body>
+    <header class="header">
+
+        <h1 class="logo"><i class="fa-brands fa-slack"></i></i>blog </h1>
+
+        <nav class="navbar">
+            <ul class="list">
+                <a href="#" class="menulink">Home</a>
+                <a href="#" class="menulink">About</a>
+                <a href="#" class="menulink">Project</a>
+                <a href="#" class="menulink">Blogs</a>
+                <a href="#" class="menulink">Contact Us</a>
+            </ul>
+        </nav>
+        <div class="mobile-view">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+    </header>
+    <form class="main" id="form">
+        <div class="display">
+            <p class="p1">Sign in with</p>
+            <a class="facebook" href="https://www.facebook.com/">
+                <button type="button" class="facebookBtn"><i class="fab fa-facebook-f"></i>
+                </button></a>
+            <a class="twitter" href="https://twitter.com/i/flow/login">
+                <button type="button" class="twitterBtn">
+                    <i class="fab fa-twitter"></i>
+                </button></a>
+            <a class="linkedin" href="https://www.linkedin.com/login">
+                <button type="button" class="linkedinBtn">
+                    <i class="fab fa-linkedin-in"></i>
+                </button></a>
+        </div>
+
+        <div class="divider">
+            <div class="line1"></div>
+            <span id="or1">Or</span>
+        </div>
+        <div class="detailText">
+            <input type="text" name="email" placeholder="Email Address" id="email"><br><br>
+
+            <input type="password" name="password" placeholder="Password" id="pwd"><br>
+            <a id="link"
+                href="https://support.google.com/accounts/answer/41078?hl=en&co=GENIE.Platform%3DAndroid">forgot
+                password?</a><br>
+        </div><br>
+        <footer>
+            <button id="submitBtn" name="submit" type="submit">Sign Up</button>
+        </footer>
+        <p id="login" style="color: black;">Already have an account?<a
+                href="https://www.patternfly.org/v3/pattern-library/application-framework/login-page/index.html">Login
+                here</a></p>
+    </form>
+    <script>
+        // const submit = document.getElementById("form");
+        // const prevent = (e) => {
+        //     e.preventDefault();
+        //     for (const iterator of e.target) {
+        //         if (iterator.value === "") {
+        //             continue
+        //         }
+        //         console.log(iterator.value)
+        //     }
+        // }
+       // submit.addEventListener("submit", prevent)
+
+        const userEmail = document.getElementById("email")
+        const emailPattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
+
+        userEmail.addEventListener("input", emailmatchPattern);
+
+        function emailmatchPattern(obj) {
+            const bool = emailPattern.test(obj.target.value)
+            if (bool) {
+                userEmail.style.borderColor = "green";
+            }
+            else {
+                userEmail.style.borderColor = "red";
+            }
+        }
+        const userPassword = document.getElementById("pwd")
+        const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/   // 8 digit for one latter and one number 
+
+        userPassword.addEventListener("input", passwordMatchPattern);
+
+        function passwordMatchPattern(obj) {
+            // console.log(obj.target.value)
+            const bool = passwordPattern.test(obj.target.value)
+            if (bool) {
+                userPassword.style.borderColor = "green"
+            }
+            else {
+                userPassword.style.borderColor = "red"
+            }
+        }
+        // header sidebar javascript
+        const mobile_nav = document.querySelector(".mobile-view");
+        const nav_header = document.querySelector(".header")
+        const blurr = document.querySelector("#form")
+        const toggleNavbar = () => {
+            nav_header.classList.toggle("active");
+            blurr.classList.add("blurring");
+
+        }
+        mobile_nav.addEventListener("click", () => {
+            toggleNavbar();
+
+        })
+
+    </script>
+</body>
+
+</html>

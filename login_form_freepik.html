@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/05db2177e4.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url(wp8792010.webp);
+
+        }
+
+        .main {
+            height: 550px;
+            width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            /* box-shadow: rgb(101, 109, 119) 1px 10px 30px 5px; */
+
+        }
+
+        .detailText {
+            padding-left: 10px;
+            margin-top: 50px;
+        }
+
+        #submitBtn {
+            margin-left: 10px;
+        }
+
+        #male,
+        #female {
+            display: none;
+            visibility: hidden;
+        }
+
+        [type=radio]:checked+img {
+            outline: 2px solid green;
+        }
+
+        [type=radio] {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        #submitBtn,
+        #cancelBtn {
+            background-color: rgb(22, 134, 209);
+            height: 35px;
+            width: 155px;
+            border: none;
+            border-radius: 20px;
+
+        }
+
+        button:active {
+            box-shadow: 2px 2px 5px rgb(22, 103, 157);
+        }
+
+        input {
+            height: 35px;
+            width: 300px;
+            outline: none;
+            padding-left: 5px;
+            border-radius: 5px;
+            background-color: rgb(246, 247, 250);
+        }
+
+        .container {
+            display: flex;
+            height: 550px;
+            width: 1150px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 25px;
+            background-color: white;
+
+        }
+
+        .fa-user {
+            font-size: xx-large;
+            background-color: rgb(99, 183, 211);
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+        }
+
+        #link {
+            margin-left: 190px;
+        }
+
+        #check {
+            height: 15px;
+            width: 15px;
+            margin-left: 10px;
+        }
+
+        #login {
+            margin-left: 50px;
+            margin-top: 10px;
+
+        }
+
+        .display {
+            display: flex;
+        }
+
+        .linkedinBtn,
+        .twitterBtn,
+        .facebookBtn {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-color: rgb(99, 183, 211);
+            border: none;
+            margin-left: 30px;
+            color: white;
+
+        }
+
+        .linkedin,
+        .twitter,
+        .facebook {
+            margin-left: 5px;
+            text-decoration: none;
+
+        }
+
+        .p1 {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: larger;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .line1 {
+            border-bottom: 2px solid gray;
+            width: 93%;
+            margin-top: 34px;
+        }
+
+        #or1 {
+            margin-top: 15px;
+            position: absolute;
+            border-radius: 50%;
+            background-color: white;
+            padding: 10px;
+        }
+
+        .divider {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="freepik">
+            <img src="./4957136_4957136.jpg" width="650px" height="520px" id="freepik">
+        </div>
+
+        <form class="main" id="form">
+
+            <header>
+                <div class="display">
+                    <p class="p1">Sign in with</p>
+                    <a class="facebook" href="https://www.facebook.com/">
+                        <button type="button" class="facebookBtn"><i class="fab fa-facebook-f"></i>
+                        </button></a>
+                    <a class="twitter" href="https://twitter.com/i/flow/login">
+                        <button type="button" class="twitterBtn">
+                            <i class="fab fa-twitter"></i>
+                        </button></a>
+                    <a class="linkedin" href="https://www.linkedin.com/login">
+                        <button type="button" class="linkedinBtn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </button></a>
+                </div>
+            </header>
+            <!-- <div class="line1">
+                <div class="line" style="border: 1px solid gray;"></div>&nbsp; &nbsp; &nbsp; Or &nbsp; &nbsp; &nbsp;<div class="line" style="border: 1px solid gray;"></div>
+            </div> -->
+            <div class="divider" >
+                <div class="line1"></div>
+                <span id="or1">Or</span>
+            </div>
+
+
+            <div class="detailText">
+                <!-- <label for="name"><b>UserName:</b></label><br> -->
+                <input type="text" name="name" placeholder="enter your name" id="name"><br><br>
+                <!-- <label for="email" id="label1"><b>Email:</b></label><br> -->
+                <input type="text" name="email" placeholder="Email Address" id="email"><br><br>
+                <!-- <label for="pwd"><b>Password:</b></label><br> -->
+                <input type="password" name="password" placeholder="Password" id="pwd"><br>
+                <a id="link"
+                    href="https://support.google.com/accounts/answer/41078?hl=en&co=GENIE.Platform%3DAndroid">forgot
+                    password?</a><br>
+                <label for="Password"><b>Gender:</b></label><br><br>
+                <label><input type="radio" id="male" name="gender"> <img src="male.jpg" height="40px"
+                        width="40px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </label>
+                <label>
+                    <input type="radio" id="female" name="gender"><img src="female.png" height="40px" width="40px">
+                </label><br>
+            </div><br>
+
+            <input type="checkbox" id="check" name="form">
+            <label for="form">I agree to the statement above.</label><br><br>
+            <footer>
+                <button id="submitBtn" name="submit" type="submit">Sign Up</button>
+                <button id="cancelBtn" name="reset" type="reset">Cancel</button>
+            </footer>
+            <p id="login" style="color: black;">Already have an account?<a
+                    href="https://www.patternfly.org/v3/pattern-library/application-framework/login-page/index.html">Login
+                    here</a></p>
+        </form>
+    </div>
+    <script>
+        const submit = document.getElementById("form");
+        const prevent = (e) => {
+            e.preventDefault();
+            for (const iterator of e.target) {
+                if (iterator.value === "") {
+                    continue
+                }
+                console.log(iterator.value)
+            }
+        }
+        submit.addEventListener("submit", prevent)
+
+        const userEmail = document.getElementById("email")
+        const emailPattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
+
+        userEmail.addEventListener("input", emailmatchPattern);
+
+        function emailmatchPattern(obj) {
+            const bool = emailPattern.test(obj.target.value)
+            if (bool) {
+                userEmail.style.borderColor = "green";
+            }
+            else {
+                userEmail.style.borderColor = "red";
+            }
+        }
+        const userPassword = document.getElementById("pwd")
+        const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/   // 8 digit for one latter and one number 
+
+        userPassword.addEventListener("input", passwordMatchPattern);
+
+        function passwordMatchPattern(obj) {
+            // console.log(obj.target.value)
+            const bool = passwordPattern.test(obj.target.value)
+            if (bool) {
+                userPassword.style.borderColor = "green"
+            }
+            else {
+                userPassword.style.borderColor = "red"
+            }
+        }
+
+        const userName = document.getElementById("name")
+        const namePattern = /^[a-z0-9 ]{8,15}$/
+
+        userName.addEventListener("input", nameMatchPattern);
+
+        function nameMatchPattern(obj) {
+            const bool = namePattern.test(obj.target.value)
+            if (bool) {
+                userName.style.borderColor = "green"
+            }
+            else {
+                userName.style.borderColor = "red"
+            }
+        }
+    </script>
+</body>
+
+</html>
